@@ -9,6 +9,7 @@ const DRDetector = () => {
   const [result, setResult] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [error, setError] = useState(null);
+  const [isResultVisible, setIsResultVisible] = useState(false);
 
   // Initialize ONNX Runtime session
   useEffect(() => {
@@ -38,34 +39,27 @@ const DRDetector = () => {
       if (acceptedFiles.length > 0) {
         const file = acceptedFiles[0];
         setSelectedImage(URL.createObjectURL(file));
+        setResult(null);
+        setIsResultVisible(false);
         
         if (session) {
           try {
             setIsLoading(true);
-            setResult(null);
-            
-            // Preprocess image
             const tensorData = await preprocessImage(file);
-            
-            // Run inference
             const tensor = new ort.Tensor('float32', tensorData, [1, 3, 299, 299]);
             const feeds = { input: tensor };
             const results = await session.run(feeds);
             
-            // Get output
             const outputData = results.output.data;
-            
-            // Interpret results (softmax calculation for probabilities)
             const exp0 = Math.exp(outputData[0]);
             const exp1 = Math.exp(outputData[1]);
             const sum = exp0 + exp1;
-            const probability = exp1 / sum; // Probability of class 1 (Diabetic Retinopathy)
+            const probability = exp1 / sum;
             
             setResult({
               prediction: probability > 0.5 ? "Diabetic Retinopathy Detected" : "No Diabetic Retinopathy",
               probability: probability
             });
-            
             setIsLoading(false);
           } catch (e) {
             console.error("Inference failed:", e);
@@ -79,24 +73,29 @@ const DRDetector = () => {
 
   return (
     <div className="dr-detector">
-      <h1>Diabetic Retinopathy Detection</h1>
-      
+      <h1>NATIONAL INSTITUTE OF TECHNOLOGY, KARNATAKA</h1>
+      <h2>DEPARTMENT OF INFORMATION TECHNOLOGY</h2>
+      <h3>DEEP LEARNING (IT353) COURSE PROJECT (ACADEMIC YEAR 2024-25):</h3>
+      <h3>DIABETIC RETINOPATHY DETECTION USING MULTILEVEL FINE-TUNED XCEPTION MODEL</h3>
+      <p><b>SUBMITTED BY: ARYAN KASHYAP (221AI012), DEEPAK C NAYAK (221AI016)</b></p>
+
       {isLoading && <p>Loading... Please wait.</p>}
       {error && <p className="error">{error}</p>}
       
       <div {...getRootProps()} className="dropzone">
         <input {...getInputProps()} />
-        <p>Drag & drop a retinal image here, or click to select one</p>
+        <button>Upload Retinal Image</button>
       </div>
       
       {selectedImage && (
         <div className="preview">
           <h3>Selected Image:</h3>
           <img src={selectedImage} alt="Selected retinal scan" />
+          <button onClick={() => setIsResultVisible(true)}>Show Results</button>
         </div>
       )}
       
-      {result && (
+      {isResultVisible && result && (
         <div className="results">
           <h3>Analysis Results:</h3>
           <p className={result.prediction.includes("Detected") ? "positive" : "negative"}>
