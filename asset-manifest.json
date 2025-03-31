@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/DR_Web/static/css/main.7cf1d81d.css",
-    "main.js": "/DR_Web/static/js/main.6413badc.js",
+    "main.css": "/DR_Web/static/css/main.cceeb450.css",
+    "main.js": "/DR_Web/static/js/main.b9f0458d.js",
     "static/js/488.523b08e1.chunk.js": "/DR_Web/static/js/488.523b08e1.chunk.js",
     "static/media/ort-wasm-simd-threaded.jsep.wasm": "/DR_Web/static/media/ort-wasm-simd-threaded.jsep.ce14fe5a0a12cc7d4389.wasm",
+    "static/media/background.png": "/DR_Web/static/media/background.7a35d44aad236b02dac5.png",
     "static/media/ort.bundle.min.mjs": "/DR_Web/static/media/ort.bundle.min.ad811ca1928e6f671e98.mjs",
     "index.html": "/DR_Web/index.html",
-    "main.7cf1d81d.css.map": "/DR_Web/static/css/main.7cf1d81d.css.map",
-    "main.6413badc.js.map": "/DR_Web/static/js/main.6413badc.js.map",
+    "main.cceeb450.css.map": "/DR_Web/static/css/main.cceeb450.css.map",
+    "main.b9f0458d.js.map": "/DR_Web/static/js/main.b9f0458d.js.map",
     "488.523b08e1.chunk.js.map": "/DR_Web/static/js/488.523b08e1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cf1d81d.css",
-    "static/js/main.6413badc.js"
+    "static/css/main.cceeb450.css",
+    "static/js/main.b9f0458d.js"
   ]
 }
