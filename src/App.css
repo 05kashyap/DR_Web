@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #9bc2db;
+  background-color: #b2b2d3;
   color: #fdfdfd; /* Light font color for contrast */
 }
 
@@ -21,22 +21,22 @@ code {
 
 .App {
   text-align: center;
-  color: #fdfdfd; /* Soft white font color */
+  color: #151515; /* Soft white font color */
 }
 
 /* Background Blur Effect */
-.App::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('../public/background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  filter: blur(12px); /* Enhanced blur for aesthetic */
-  z-index: -1;
-}
+/*.App::before {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  inset: 0;*/
+/*  background-image: url('../public/background.png');*/
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*  background-repeat: no-repeat;*/
+/*  background-attachment: fixed;*/
+/*  filter: blur(12px); !* Enhanced blur for aesthetic *!*/
+/*  z-index: -1;*/
+/*}*/
 
 /* Header Styling */
 .App-header {
@@ -51,9 +51,9 @@ main {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255);
   border-radius: 16px;
-  backdrop-filter: blur(8px);
+  /*backdrop-filter: blur(8px);*/
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
