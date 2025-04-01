@@ -1,5 +1,7 @@
 # Multilevel finetuning of CNNs for Diabetic Retinopathy Binary Classification
-Hosted Link: [https://05kashyap.github.io/DR_Web/]
+
+### Our code can be found at: [code](https://github.com/05kashyap/DR_Web)
+### Hosted Link: [web](https://05kashyap.github.io/DR_Web/)
 
 ### Name: Aryan Kashyap Naveen, Deepak C Nayak
 ### Roll Number: 221AI012, 221AI016
