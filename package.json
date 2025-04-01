@@ -2,6 +2,7 @@
   "name": "dr-detection-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://05kashyap.github.io/DR_Web",
   "dependencies": {
     "@craco/craco": "^7.1.0",
     "framer-motion": "^12.6.2",
