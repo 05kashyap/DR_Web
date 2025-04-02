@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DR_Web/static/css/main.aa282e24.css",
-    "main.js": "/DR_Web/static/js/main.de75edef.js",
+    "main.js": "/DR_Web/static/js/main.ad2cbcee.js",
     "static/js/488.523b08e1.chunk.js": "/DR_Web/static/js/488.523b08e1.chunk.js",
     "index.html": "/DR_Web/index.html",
     "main.aa282e24.css.map": "/DR_Web/static/css/main.aa282e24.css.map",
-    "main.de75edef.js.map": "/DR_Web/static/js/main.de75edef.js.map",
+    "main.ad2cbcee.js.map": "/DR_Web/static/js/main.ad2cbcee.js.map",
     "488.523b08e1.chunk.js.map": "/DR_Web/static/js/488.523b08e1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa282e24.css",
-    "static/js/main.de75edef.js"
+    "static/js/main.ad2cbcee.js"
   ]
 }
